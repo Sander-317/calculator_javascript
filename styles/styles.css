@@ -44,7 +44,7 @@ body {
   word-break: break-all;
 }
 
-.calculator__output__previos-operand {
+.calculator__output__previous-operand {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
 }
