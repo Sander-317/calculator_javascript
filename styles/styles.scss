@@ -1,3 +1,48 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+
+
 body {
-    background-color: pink;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+    &__buttons {
+        cursor: pointer;
+        font-size: 2rem;
+        border: 1px solid white;
+        outline: none;
+        background-color: rgba(255, 255, 255, .75);
+
+        &:hover {
+            background-color: rgba(255, 255, 255, .90);
+            
+        }
+    &__all-clear {
+        grid-column: span 2;
+    } 
+    &__del {
+        color: red;
+    }
+    &__operator{
+        color: blue;
+    }
+    &__number {
+        color: yellow;
+    }
+
+    &__equals {
+        grid-column: span 2;
+    }  
+    }
 }
