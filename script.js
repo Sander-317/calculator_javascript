@@ -1,1 +1,7 @@
-console.log("javascript werkt")
+const numberButtons = document.querySelectorAll(".calculator__buttons__number")
+const operationButtons = document.querySelectorAll(".calculator__buttons__operator")
+const equalsButton = document.querySelector(".calculator__buttons__equals")
+const deleteButton = document.querySelector(".calculator__buttons__del")
+const allClearButton = document.querySelector(".calculator__buttons__all-clear")
+const previousOperandTextElement = document.querySelector(".calculator__output__previous-operand")
+const currentOperandTextElement = document.querySelector(".calculator__output__current-operand")
