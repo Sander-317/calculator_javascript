@@ -2,26 +2,22 @@ class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement){
         this.previousOperandTextElement = previousOperandTextElement
         this.currentOperandTextElement = currentOperandTextElement
-        this.clear()
-
+        this.clear()  
     }
 
     clear() { 
         this.currentOperand = " "
         this.previousOperand = " "
         this.operation = undefined
-
-    }
+   }
 
     delete() {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
-
     }
 
     appendNumber(number) {
         if (number === "." && this.currentOperand.includes(".")) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
-
     }
 
     chooseOperation(operation) {
@@ -32,7 +28,6 @@ class Calculator {
         this.operation = operation
         this.previousOperand = this.currentOperand
         this.currentOperand = " "
-
     }
 
     compute() {
@@ -41,23 +36,18 @@ class Calculator {
         const current = parseFloat(this.currentOperand)
         if (isNaN(prev) || isNaN(current)) return
         switch (this.operation) {
-
             case "+":
                 computation = prev +  current
                 break
-            
             case "-":
                 computation = prev -  current
                 break
-
             case "*":
                 computation = prev *  current
                 break
-    
             case "÷":
                 computation = prev /  current
                 break
-            
             default:
                 return
         }
@@ -79,7 +69,8 @@ class Calculator {
         }
         if  (decimalDigits != null) {
             return `${integerDisplay}.${decimalDigits}`
-        } else {
+        } 
+        else {
             return integerDisplay
         }
     }
@@ -96,8 +87,6 @@ class Calculator {
     }
 }
 
-
-
 const numberButtons = document.querySelectorAll(".calculator__buttons__number")
 const operationButtons = document.querySelectorAll(".calculator__buttons__operator")
 const equalsButton = document.querySelector(".calculator__buttons__equals")
@@ -105,8 +94,6 @@ const deleteButton = document.querySelector(".calculator__buttons__del")
 const allClearButton = document.querySelector(".calculator__buttons__all-clear")
 const previousOperandTextElement = document.querySelector(".calculator__output__previous-operand")
 const currentOperandTextElement = document.querySelector(".calculator__output__current-operand")
-
-
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
