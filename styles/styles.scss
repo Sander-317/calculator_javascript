@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+// font-family: 'Nunito', sans-serif;
+
+
 *, *::before, *::after {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
     box-sizing: border-box;
-    font-weight: normal;
 }
 
-
-
 body {
-    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    background: linear-gradient(to right, #e4f70c, #427eff, #427eff, #00FF6C);
 }
 
 .calculator{
@@ -35,8 +38,7 @@ body {
         &__current-operand{
         font-size: 2.5rem;
         color: white;
-    }
-
+        }
     }
 
     &__buttons {
@@ -48,23 +50,22 @@ body {
 
         &:hover {
             background-color: rgba(255, 255, 255, .90);
-            
         }
     &__all-clear {
         grid-column: span 2;
+        color: #a8323a;
     } 
     &__del {
-        color: red;
+        color: #a8323a;
     }
     &__operator{
-        color: blue;
+        color: black;
     }
     &__number {
-        color: yellow;
+        color: #424c61;
     }
-
     &__equals {
         grid-column: span 2;
-    }  
+       }  
     }
 }

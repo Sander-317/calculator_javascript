@@ -1,12 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
 *, *::before, *::after {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-weight: normal;
 }
 
 body {
-  background: -webkit-gradient(linear, left top, right top, from(#00AAFF), to(#00FF6C));
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  background: -webkit-gradient(linear, left top, right top, from(#e4f70c), color-stop(#427eff), color-stop(#427eff), to(#00FF6C));
+  background: linear-gradient(to right, #e4f70c, #427eff, #427eff, #00FF6C);
 }
 
 .calculator {
@@ -68,18 +70,19 @@ body {
 
 .calculator__buttons__all-clear {
   grid-column: span 2;
+  color: #a8323a;
 }
 
 .calculator__buttons__del {
-  color: red;
+  color: #a8323a;
 }
 
 .calculator__buttons__operator {
-  color: blue;
+  color: black;
 }
 
 .calculator__buttons__number {
-  color: yellow;
+  color: #424c61;
 }
 
 .calculator__buttons__equals {
