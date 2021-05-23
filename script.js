@@ -82,10 +82,6 @@ class Calculator {
         } else {
             return integerDisplay
         }
-
-        // const floatNumber = parseFloat(number)
-        // if (isNaN(floatNumber)) return " "
-        // return floatNumber.toLocaleString("en")
     }
 
     updateDisplay() {
@@ -94,6 +90,8 @@ class Calculator {
         if (this.operation != null) {
             this.previousOperandTextElement.innerText = 
                 `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        } else {
+            this.previousOperandTextElement.innerText = " "
         }
     }
 }
