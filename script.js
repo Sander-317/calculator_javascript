@@ -66,19 +66,18 @@ class Calculator {
         this.previousOperand = " "
     }
 
-    updateDisplay() {
-        this.currentOperandTextElement.innerText = this.currentOperand
-        if (this.operation != null) {
-            this.previousOperandTextElement.innerText = {
-                `${this.previousOperand} ${this.operation}`
-            }
-
-        }
-        
-
+    getDisplayNumber(number) {
+        return number
     }
 
-
+    updateDisplay() {
+        this.currentOperandTextElement.innerText = 
+        this.getDisplayNumber(this.currentOperand)
+        if (this.operation != null) {
+            this.previousOperandTextElement.innerText = 
+                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        }
+    }
 }
 
 
